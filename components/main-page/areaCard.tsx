@@ -11,11 +11,15 @@ interface AreaCardProps {
   image: string;
   link: string;
   size: 'large' | 'small';
+  className?: string;
 }
 
-export function AreaCard({ title, subtitle, image, link, size }: AreaCardProps) {
+export function AreaCard({ title, subtitle, image, link, size , className}: AreaCardProps) {
   return (
-    <div className={`group relative rounded-xl overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105 ${size === 'large' ? 'col-span-2 row-span-2' : 'col-span-1 row-span-1'}`}>
+    <div className={`group relative rounded-xl overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105 
+  ${size === 'large' ? 'col-span-2 row-span-2' : 'col-span-1 row-span-1'}   ${className || ''}`}>
+
+ 
       {/* الصورة */}
       <Image
         src={image}

@@ -6,7 +6,7 @@ import SectionTitle from '../common/sectionTitle';
 
 export function Services() {
   return (
-      <section className="lg:px-20 md:px-10 px-5 pt-10">
+      <section className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 py-10">
     <SectionTitle title="خدماتنا موثوقة وسريعة" 
     description={
       <>
@@ -20,7 +20,7 @@ export function Services() {
 
       <div className="max-w-7xl mx-auto">
         
-        <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {mockServices.map((service) => (
             <ServiceCard
               key={service.id}

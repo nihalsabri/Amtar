@@ -5,6 +5,8 @@ export interface AreaCard {
   image: string;      // رابط الصورة
   link: string;       // رابط صفحة التفاصيل
     size: 'large' | 'small';
+      className?: string;
+
 }
 
 // lib/mock/areas.ts

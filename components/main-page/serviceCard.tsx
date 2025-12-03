@@ -15,7 +15,7 @@ interface CardProps {
 export function ServiceCard({ icon, title, description, onDetailsClick }: CardProps) {
   return (
     <>  
-     <div className="group w-[297px] h-[202px] rounded-2xl p-4 mt-10 mb-10 bg-[#F1F5F9] text-[#1E3A5F] 
+     <div className="group w-[297px] h-[202px] rounded-2xl p-4  mt-4 bg-[#F1F5F9] text-[#1E3A5F] 
                  shadow-sm border border-[#CBD5E1] 
                  hover:bg-[#1E3A5F] hover:text-white 
                  transition-all duration-300 cursor-pointer">
