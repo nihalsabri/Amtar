@@ -29,7 +29,7 @@ export function AreaCard({ title, subtitle, image, link, size , className}: Area
       />
 
       {/* النص فوق الصورة */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-6">
+      <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-6">
         <h3 className="text-white text-2xl font-bold mb-1">{title}</h3>
         <p className="text-white text-sm opacity-90">{subtitle}</p>
       </div>

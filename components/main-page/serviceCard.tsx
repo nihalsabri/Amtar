@@ -37,7 +37,7 @@ export function ServiceCard({ icon, title, description, onDetailsClick }: CardPr
 
       <Button
         variant="outline"
-        className="group/btn w-[265px] h-[36px] rounded-full 
+        className="group/btn w-[265px] h-9 rounded-full 
                  px-4 py-2 mb-4 border border-[#CBD5E1] 
                  flex items-center justify-between
                  bg-white text-[#314158]
