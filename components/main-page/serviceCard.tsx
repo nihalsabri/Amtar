@@ -1,14 +1,14 @@
 'use client';
 
 import Image from 'next/image';
-import { Button } from '@/components/ui/button'; // إذا كنت تستخدم shadcn/ui
+import { Button } from '@/components/ui/button'; 
 import { ArrowLeft } from 'lucide-react';
 
 interface CardProps {
-  icon: string;      // رابط الأيقونة
-  title: string;     // عنوان الكارد
-  description: string; // وصف الكارد
-  onDetailsClick: () => void; // دالة عند الضغط على الزر
+  icon: string;     
+  title: string;     
+  description: string; 
+  onDetailsClick: () => void; 
 }
 
 

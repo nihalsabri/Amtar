@@ -1,62 +1,51 @@
-export interface AreaCard {
-  id: number;
-  title: string;      // مثل: "الرياض"
-  subtitle: string;   // مثل: "مشرف"
-  image: string;      // رابط الصورة
-  link: string;       // رابط صفحة التفاصيل
-    size: 'large' | 'small';
-      className?: string;
 
-}
-
-// lib/mock/areas.ts
 export const mockAreas = [
   {
     id: 1,
     title: "الرياض",
-    subtitle: "مشرف",
-    image: "/images/riyadh.jpg",
+    image: "/main-page/areas/riyyad.png",
     link: "/areas/riyadh",
-    size: "large", // ← كبير
-  },
+    size: "large" as const,
+    
+ position: { row: 1, col: 1, rowSpan: 2, colSpan: 1 },  },
   {
     id: 2,
     title: "جدة",
-    subtitle: "مشرف",
-    image: "/images/jeddah.jpg",
+    image: "/main-page/areas/jedda.png",
     link: "/areas/jeddah",
-    size: "small", // ← صغير
+     size: "small" as const,
+    position: { row: 1, col: 3 },
   },
   {
     id: 3,
     title: "المدينة المنورة",
-    subtitle: "مشرف",
-    image: "/images/medina.jpg",
+    image: "/main-page/areas/city.png",
     link: "/areas/medina",
-    size: "small", // ← صغير
+   size: "small" as const,
+    position: { row: 1, col: 2 },
   },
   {
     id: 4,
     title: "الرياض",
-    subtitle: "مشرف",
-    image: "/images/riyadh2.jpg",
+    image: "/main-page/areas/riyad.png",
     link: "/areas/riyadh",
-    size: "large", // ← كبير
+    size: "small" as const,
+    position: { row: 1, col: 4 },
   },
   {
     id: 5,
     title: "الدمام",
-    subtitle: "مشرف",
-    image: "/images/dammam.jpg",
+    image: "/main-page/areas/damam.png",
     link: "/areas/dammam",
-    size: "small", // ← صغير
+  size: "small" as const,
+    position: { row: 2, col: 3, colSpan: 2 },
   },
   {
     id: 6,
     title: "مكة",
-    subtitle: "مشرف",
-    image: "/images/mecca.jpg",
+    image: "/main-page/areas/makka.png",
     link: "/areas/mecca",
-    size: "small", // ← صغير
+   size: "small" as const,
+    position: { row: 2, col: 2},
   },
 ];

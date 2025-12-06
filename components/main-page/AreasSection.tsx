@@ -1,25 +1,24 @@
-// components/sections/AreasSection.tsx
-'use client';
-
 import { mockAreas } from '@/mockData/Area';
-import  {AreaCard}  from '@/components/main-page/areaCard';
+import { AreaCard } from '@/components/main-page/areaCard';
+import SectionTitle from '../common/sectionTitle';
 
 export function AreasSection() {
   return (
-    <section className="py-16 px-4 md:px-8 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">المواقع الأكثر طلباً في المملكة</h2>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-  {mockAreas.map(({ id, size, ...rest }) => (
-    <AreaCard
-      key={id}
-      {...rest}
-      size={size as 'large' | 'small'}
-      className={size === 'large' ? 'md:col-span-2' : ''}
+    <section className="lg:px-20 md:px-10 px-5 p-10 bg-[#F1F5F9] ">
+      
+       <SectionTitle
+                 title= " المناطق الأكثر طلباً في المملكة"
+                  description= "ابحث عن عقاراتك في المناطق الأكثر طلبًا"
+                 more
+                 href={'/areas'}
     />
-  ))}
-</div>
-      </div>
+        
+        <div className="grid grid-cols-4  grid-rows-2 pt-10 gap-6 h-[600px]">
+          {mockAreas.map((area) => (
+            <AreaCard key={area.id} {...area} />
+          ))}
+        </div>
+      
     </section>
   );
 }
