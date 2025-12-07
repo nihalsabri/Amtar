@@ -40,7 +40,7 @@ export default function MarketCard({
 
       <div className=" flex flex-col gap-4 justify-between  ">
 <div >
-        <h3 className="text-xl font-bold text-gray-800">{title}</h3>
+        <h3 className="text-xl font-medium text-gray-800">{title}</h3>
         <p className="text-sm text-gray-500">{subtitle}</p>
         </div>
         <div className="flex flex-wrap gap-1 ">
@@ -69,7 +69,7 @@ export default function MarketCard({
           {/* <p className="text-2xl font-bold text-blue-600">{price}</p> */}
      <div className="text-2xl flex gap-2 text-blue-600v font-semibold text-secoundary ">
       {price}
-      <Image  src="/icons/Riyal.png" width={20} height={20} alt="logo" />
+      <Image  src="/icons/ryalblue.svg" width={20} height={20} alt="logo" />
       </div>
           
        </div>

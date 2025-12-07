@@ -1,7 +1,9 @@
+
 'use client';
 
 import Image from 'next/image';
 import { ArrowUpLeft } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 interface AreaCardProps {
   title: string;
@@ -20,68 +22,41 @@ interface AreaCardProps {
 
 export function AreaCard({ title,  image, link, size, position ,  count = 0 }: AreaCardProps) {
   
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsLargeScreen(window.innerWidth >= 1024);
+    };
+    
+    checkScreen();
+    window.addEventListener('resize', checkScreen);
+    return () => window.removeEventListener('resize', checkScreen);
+  }, []);
+
   const gridClasses = {
-    large: 'col-span-2 row-span-2',
-    small: 'col-span-1 row-span-1',
+    large: 'lg:col-span-2 lg:row-span-2',
+    small: 'lg:col-span-1 lg:row-span-1',
   };
 
-  // const positionClasses = `
-  //   ${position.rowSpan ? `row-span-${position.rowSpan}` : ''}
-  //   ${position.colSpan ? `col-span-${position.colSpan}` : ''}
-  // `;
-
   return (
-    // <div 
-    //   className={`
-    //     group relative rounded-xl overflow-hidden cursor-pointer 
-    //     transition-transform duration-300 hover:scale-105
-    //     ${gridClasses[size]}
-    //     ${positionClasses}
-    //   `}
-    //   style={{
-    //     gridRowStart: position.row,
-    //     gridColumnStart: position.col,
-    //   }}
-    // >
-
-    //   <Image
-    //     src={image}
-    //     alt={title}
-    //     fill
-    //     className="object-cover"
-    //   />
-      
-    //   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-6">
-    //     <h3 className="text-white text-2xl font-bold mb-1">{title}</h3>
-    //     <p className="text-white text-sm opacity-90">{subtitle}</p>
-    //   </div>
-      
-    //   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-    //     <Button
-    //       variant="ghost"
-    //       size="icon"
-    //       className="bg-white/20 backdrop-blur-sm text-white hover:bg-white/30"
-    //       asChild
-    //     >
-    //       <a href={link}>
-    //         <ArrowUpRight className="h-5 w-5" />
-    //       </a>
-    //     </Button>
-    //   </div>
-    // </div>
      <a 
       href={link}
       className={`
-        group relative block rounded-xl overflow-hidden 
+        group relative block rounded-3xl overflow-hidden 
         cursor-pointer transition-all duration-500
+        w-full
+        h-[266px]
+        md:h-[300px]
+        lg:h-auto
         ${gridClasses[size]}
       `}
-      style={{
+      style={isLargeScreen ? {
         gridRowStart: position.row,
         gridColumnStart: position.col,
         gridRowEnd: position.rowSpan ? `span ${position.rowSpan}` : undefined,
         gridColumnEnd: position.colSpan ? `span ${position.colSpan}` : undefined,
-      }}
+      } : {}}
     >
  
       <div className="relative h-full w-full">
@@ -92,7 +67,7 @@ export function AreaCard({ title,  image, link, size, position ,  count = 0 }: A
             alt={title}
             fill
             className="object-cover transition-transform duration-700 group-hover:scale-110"
-            sizes="(max-width: 768px) 100vw, 50vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         </div>
 

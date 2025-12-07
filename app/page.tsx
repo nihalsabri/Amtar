@@ -7,7 +7,10 @@ import { Services } from "@/components/main-page/services";
 import PropertiesSection from "@/components/main-page/properties";
 import MarketSection from "@/components/main-page/marketSection";
 import PropertyProjectSection from "@/components/main-page/propertyProjectSection";
-// import PropertyRequestsSection from "@/components/main-page/propertyRequests";
+import PropertyRequestsSection from "@/components/main-page/propertyRequests";
+import { JoinUs } from "@/components/main-page/joinus";
+import Partners from "@/components/main-page/partners";
+import AgentSection from "@/components/main-page/agentSection";
 
 export default function Home() {
   return (
@@ -21,8 +24,10 @@ export default function Home() {
        <PropertiesSection />
        <MarketSection />
        <PropertyProjectSection />
-       {/* <PropertyRequestsSection /> */}
-       
+       <PropertyRequestsSection />
+       <JoinUs />
+      <Partners />
+      <AgentSection />
     </div>
   );
 }

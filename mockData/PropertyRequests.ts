@@ -24,7 +24,7 @@ export const mockPropertyRequests: PropertyRequestCard[] = [{
     bathrooms: 2,
     floors: 1,
     company: "عبد الحكيم سيد القادر",
-    companyLogo: "/icons/company-logo.svg",
+    companyLogo: "/icons/avatar1.jpg",
     daysLeft: 12,
   },
   {
@@ -38,7 +38,7 @@ export const mockPropertyRequests: PropertyRequestCard[] = [{
     bathrooms: 2,
     floors: 1,
     company: "عبد الحكيم سيد القادر",
-    companyLogo: "/icons/company-logo.svg",
+    companyLogo: "/icons/avatar2.jpg",
     daysLeft: 12,
   },
   {
@@ -52,7 +52,7 @@ export const mockPropertyRequests: PropertyRequestCard[] = [{
     bathrooms: 2,
     floors: 1,
     company: "عبد الحكيم سيد القادر",
-    companyLogo: "/icons/company-logo.svg",
+    companyLogo: "/icons/avatar3.jpg",
     daysLeft: 12,
   },
  

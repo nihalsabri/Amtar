@@ -8,6 +8,7 @@ export default function SectionTitle({
   title,
   description = "",
   more = false,
+  more2 = false,
   centred = false,
   href,
 }: SectionTitleProps) {
@@ -15,9 +16,12 @@ export default function SectionTitle({
     <div
       className={`flex items-center shrink-0 md:shrink flex-wrap ${
         more ? "md:justify-between justify-end" : "justify-center"
+      } ${
+        more2 ? "md:justify-between justify-start" : "justify-center"
+      }
       }`}
     >
-      <div className={`flex flex-col gap-3 ${centred ? "items-center" : ""}`}>
+      <div className={`flex flex-col gap-3 ${centred ? "items-center" : "justify-start text-right"}`}>
         <h2 className="lg:text-4xl md:text-3xl text-2xl font-bold text-primary">
           {title}
         </h2>
@@ -30,6 +34,15 @@ export default function SectionTitle({
           </Button>
         </Link>{" "}
       </Activity>
+ <Activity mode={more2 ? "visible" : "hidden"}>
+        <Link href={href || "/#"} className="pt-3 md:pt-0">
+          <Button className="bg-primary-muted text-primary text-xs md:text-base hover:text-white rounded-full self-end">
+            مشاهدة جميع مناطق الممكلة    <ArrowUpLeft />
+          </Button>
+        </Link>{" "}
+      </Activity>
+
+
     </div>
   );
 }

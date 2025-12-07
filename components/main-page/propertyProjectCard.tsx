@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Heart, Bed, Bath, Ruler, Layers, Layout } from 'lucide-react';
+import { Heart, Bed, Bath,  Layout } from 'lucide-react';
 
 interface PropertyCard {
   id: number;
@@ -25,7 +25,7 @@ export function PropertyProjectCard({
     area,
     bedrooms,  
     bathrooms,
-    floors,
+ 
     company,
     projectsno,
     companyLogo,
@@ -53,12 +53,12 @@ export function PropertyProjectCard({
           className="object-cover "
           style={{ borderRadius: '20px 20px 0 0' }}
         />
-        <div className=" absolute bottom-0 left-0 right-0 backdrop-blur-md bg-white/20   p-4 flex items-center h-[60px] gap-2 ">
+        <div className=" absolute bottom-2 left-2 right-2 backdrop-blur-[2px] rounded-xl p-4 flex items-center h-[60px] gap-2 ">
         <Image src={companyLogo} alt={company} width={44} height={44}  className='bg-white p-2 rounded-full'/>
 
         <div className="flex flex-col">
-          <span className="text-xl text-white">{company}</span>
-          <span className="text-sm text-white">{projectsno}</span>
+          <span className="font-normal text-white">{company}</span>
+          <span className="font-light  text-white">{projectsno}</span>
         </div>
 
       </div>
@@ -73,7 +73,7 @@ export function PropertyProjectCard({
       </div>
       <div className="p-4">
 
-        <h3 className="text-xl font-bold text-gray-800">{title}</h3>
+        <h3 className="text-xl font-medium text-gray-800">{title}</h3>
         <p className="text-sm text-gray-500">{subtitle}</p>
 
         <div className="flex flex-wrap gap-2 pt-1">
@@ -96,9 +96,9 @@ export function PropertyProjectCard({
         <div className="pt-4 ">
           <p className="text-sm text-gray-500">أسعار تبدأ من</p>
           {/* <p className="text-2xl font-bold text-blue-600">{price}</p> */}
-     <div className="text-2xl flex gap-2 text-blue-600v font-bold text-secoundary ">
+     <div className="text-2xl flex gap-2 text-blue-600v font-semibold  text-secoundary ">
       {price}
-      <Image  src="/icons/Riyal.png" width={20} height={20} alt="logo" />
+      <Image  src="/icons/ryalblue.svg" width={20} height={20} alt="logo" />
       </div>
           
        </div>
