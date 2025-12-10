@@ -17,7 +17,7 @@ export default function SectionTitle({
       className={`flex items-center shrink-0 md:shrink flex-wrap ${
         more ? "md:justify-between justify-end" : "justify-center"
       } ${
-        more2 ? "md:justify-between justify-start" : "justify-center"
+        more2 ? "md:justify-between justify-end " : "justify-center"
       }
       }`}
     >
