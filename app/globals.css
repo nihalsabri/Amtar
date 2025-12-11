@@ -72,6 +72,8 @@
 body {
   font-family: 'Rubik Custom', sans-serif;
   direction: rtl;
+    overflow-x: hidden;
+
 }
 
 :root {

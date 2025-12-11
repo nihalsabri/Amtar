@@ -31,22 +31,22 @@ export default function AgentSection() {
               <AgentCard key={agent.id} {...agent} index={index} />
             ))}
           </div> */}
-
-<div className="hidden md:flex justify-center items-center gap-2 px-6 w-full max-w-6xl lg:mr-[10vw] md:mr-0">  {mockAgents.map((agent, index) => (
+{/* 
+<div className="hidden md:flex justify-center items-center gap-4 px-6 w-full max-w-7xl lg:mr-[10vw] md:mr-0">  {mockAgents.map((agent, index) => (
     <AgentCard key={agent.id} {...agent} index={index} />
   ))}
-</div>
+</div> */}
 
           {/* للشاشات الصغيرة - scroll أفقي */}
-          <div className="md:hidden flex overflow-x-auto scrollbar-hide px-4">
-            <div className="flex items-center gap-6 min-w-max">
+          {/* <div className="md:hidden flex overflow-x-auto scrollbar-hide px-4">
+            <div className="flex items-center gap-2 min-w-max">
               {mockAgents.map((agent, index) => (
-                <div key={agent.id} className="flex-shrink-0 w-[85vw]">
+                <div key={agent.id} className="flex-shrink-0 w-85vw]">
                   <AgentCard {...agent} index={index} />
                 </div>
               ))}
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */}
         </div>
       </div>
     </section>
