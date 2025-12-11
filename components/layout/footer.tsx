@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-<footer className="bg-primary text-white pt-12 pb-8 w-full">
-      <div className="relative z-10 bg-[#F1F5F9] text-[#052531] rounded-3xl p-4 sm:p-6 mx-4 sm:mx-auto max-w-[calc(100%-2rem)] sm:max-w-[85rem] shadow-lg h-auto lg:h-[316px] -mt-[80px] mb-4">
+<footer className="bg-primary text-white pt-12 pb-8 w-full mt-[450] lg:mt-[0]">
+      <div className="relative z-10 bg-[#F1F5F9] text-[#052531] rounded-3xl p-4 sm:p-6 mx-4 sm:mx-auto max-w-[calc(100%-2rem)] sm:max-w-[85rem] shadow-lg h-auto lg:h-[316px] lg:mt-[-80px]   -mt-[480px] mb-4">
         
         <div className="flex flex-col lg:flex-row items-center h-full">
           
@@ -15,7 +15,7 @@ export default function Footer() {
               alt="تطبيق عقارات أمتار"
               width={650}
               height={505}
-              className="rounded-xl object-contain w-full max-w-[250px] sm:max-w-[400px] lg:max-w-[550px] mx-auto"
+              className="rounded-xl object-contain w-full max-w-[400px] sm:max-w-[400px] lg:max-w-[550px] mx-auto"
             />
           </div>
 

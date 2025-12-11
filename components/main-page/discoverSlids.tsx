@@ -59,35 +59,35 @@ export function DiscoverSlides() {
           </TabsTrigger>
         </TabsList>
         <TabsContent value="Riyadh">
-          <div className="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-4 -mx-5 px-5 lg:mx-0 lg:px-0">
+          <div className="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-4 px-5 lg:px-20">
             {mockData.map((card, index) => (
               <DiscoverCard key={index} {...card} />
             ))}
           </div>
         </TabsContent>
         <TabsContent value="Macca">
-          <div className="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-4 -mx-5 px-5 lg:mx-0 lg:px-0">
+          <div className="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-4 px-5 lg:px-20">
             {mockData2.map((card, index) => (
               <DiscoverCard key={index} {...card} />
             ))}
           </div>
         </TabsContent>
         <TabsContent value="Dammam">
-          <div className="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-4 -mx-5 px-5 lg:mx-0 lg:px-0">
+          <div className="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-4 px-5 lg:px-20">
             {mockData3.map((card, index) => (
               <DiscoverCard key={index} {...card} />
             ))}
           </div>
         </TabsContent>
         <TabsContent value="Jeddah">
-          <div className="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-4 -mx-5 px-5 lg:mx-0 lg:px-0">
+          <div className="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-4 px-5 lg:px-20">
             {mockData4.map((card, index) => (
               <DiscoverCard key={index} {...card} />
             ))}
           </div>
         </TabsContent>
         <TabsContent value="Jizan">
-          <div className="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-4 -mx-5 px-5 lg:mx-0 lg:px-0">
+          <div className="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-4 px-5 lg:px-20">
             {mockData.map((card, index) => (
               <DiscoverCard key={index} {...card} />
             ))}

@@ -35,17 +35,17 @@ export default function AgentSection() {
           </div>
 
           {/* للشاشات المتوسطة - كروت مع فراغات */}
-          <div className="hidden md:flex lg:hidden flex overflow-x-auto scrollbar-hide gap-6">
+          <div className="hidden md:flex lg:hidden flex overflow-x-auto items-center scrollbar-hide gap-6">
             {mockAgents.map((agent, index) => (
               <AgentCard key={agent.id} {...agent} index={index} />
             ))}
           </div>
 
           {/* للشاشات الصغيرة - scroll أفقي */}
-          <div className="md:hidden flex overflow-x-auto scrollbar-hide pb-4">
+          <div className="md:hidden flex overflow-x-auto items-center scrollbar-hide pb-4">
             <div className="flex gap-6 min-w-max px-5">
               {mockAgents.map((agent, index) => (
-                <div key={agent.id} className="shrink-0">
+                <div key={agent.id} className="shrink-0 ">
                   <AgentCard {...agent} index={index} />
                 </div>
               ))}
