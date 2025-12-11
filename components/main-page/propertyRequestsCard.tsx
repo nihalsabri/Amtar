@@ -11,7 +11,7 @@ interface PropertyRequestsCard {
   company: string;
   companyLogo: string;
   daysLeft: number;
-  area?: number;
+  area?: string;
   bedrooms?: number;
   bathrooms?: number;
   propertyType?: string;
@@ -25,7 +25,7 @@ export function PropertyRequestsCard({
   company,
   companyLogo,
   daysLeft,
-  area = 257,
+  area = "",
   bedrooms = 2,
   bathrooms = 2,
   propertyType = "شقة",
@@ -69,7 +69,7 @@ export function PropertyRequestsCard({
         <span className="text-xs text-gray-500">{subtitle}</span>
       </div>
 
-      <div className="border border-[#CAD5E2] mb-3"></div>
+      <div className="border border-[#ebebebd0] mb-3"></div>
 
       {/* التفاصيل */}
       <div className="flex flex-wrap gap-2 mb-3">

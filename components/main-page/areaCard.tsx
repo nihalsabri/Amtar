@@ -142,7 +142,7 @@ interface AreaCardProps {
   count?: number;
 }
 
-export function AreaCard({ title, image, link, size, position, count = 0 }: AreaCardProps) {
+export function AreaCard({ title, image, link, size, position, count = 0, className = '' }: AreaCardProps) {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   useEffect(() => {
@@ -162,7 +162,7 @@ export function AreaCard({ title, image, link, size, position, count = 0 }: Area
   return (
     <a
       href={link}
-      className={`group relative block rounded-3xl overflow-hidden cursor-pointer transition-all duration-500 w-full h-[266px] md:h-[300px] lg:h-auto ${gridClasses[size]} ${!isLargeScreen ? 'flex-shrink-0 w-[60vw] -mr-4' : ''}`}
+      className={`group relative block rounded-3xl overflow-hidden cursor-pointer transition-all duration-500 w-full h-[266px] md:h-[250px] lg:h-auto ${gridClasses[size]}  `}
       style={
         isLargeScreen
           ? {

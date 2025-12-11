@@ -15,14 +15,12 @@ export default function SectionTitle({
   return (
     <div
       className={`flex items-center shrink-0 md:shrink flex-wrap ${
-        more ? "md:justify-between justify-end" : "justify-center"
-      } ${
-        more2 ? "md:justify-between justify-end " : "justify-center"
-      }
-      }`}
+    more || more2 ? "md:justify-between justify-end" : "justify-center"
+  } 
+      `}
     >
       <div className={`flex flex-col gap-3 ${centred ? "items-center" : "justify-start text-right"}`}>
-        <h2 className="lg:text-4xl md:text-3xl text-2xl font-bold text-primary">
+        <h2 className="lg:text-4xl md:text-3xl text-2xl font-bold text-primary ">
           {title}
         </h2>
         <p className="text-muted-foreground">{description}</p>

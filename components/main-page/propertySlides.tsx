@@ -105,11 +105,11 @@ export function PropertySlides() {
 
    
         <TabsContent value="Riyadh">
-          <div className="flex overflow-x-auto pb-4 -mx-5 px-5 snap-x snap-mandatory">
+          <div className="flex overflow-x-auto pb-4 -mx-1 px-2 snap-x snap-mandatory">
             {mockData.map((card, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-[403px] px-1 md:px-2 lg:px-4"
+                className="flex-shrink-0  px-1 md:px-2 lg:px-4"
               >
                 <PropertyCard {...card} />
               </div>
@@ -123,7 +123,7 @@ export function PropertySlides() {
             {mockData2.map((card, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-[403px] px-1 md:px-2 lg:px-4"
+                className="flex-shrink-0  px-1 md:px-2 lg:px-4"
               >
                 <PropertyCard {...card} />
               </div>

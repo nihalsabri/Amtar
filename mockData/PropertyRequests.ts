@@ -5,7 +5,7 @@ export interface PropertyRequestCard {
   subtitle: string;
   badge: string;
   price: string;
-  area: number;
+  area: string;
   bedrooms: number;
   bathrooms: number;
   floors: number;
@@ -22,8 +22,8 @@ export const mockPropertyRequests: PropertyRequestCard[] = [
     title: "مطبخ شقة للايجار",
     subtitle: "الرياض - الدوادمي، المحيط، النظيم",
     badge: "إيجار",
-    price: "14,339,814",
-    area: 257,
+    price: "1500 - 2000",
+    area:"200 : 250",
     bedrooms: 2,
     bathrooms: 2,
     floors: 1,
@@ -38,8 +38,8 @@ export const mockPropertyRequests: PropertyRequestCard[] = [
     title: "مطبخ شقة للايجار",
     subtitle: "الرياض - الدوادمي، المحيط، النظيم",
     badge: "بيع",
-    price: "سعر السوق",
-    area: 257,
+    price: "1500 - 2000",
+    area: "200 : 250",
     bedrooms: 3,
     bathrooms: 2,
     floors: 1,
@@ -54,8 +54,8 @@ export const mockPropertyRequests: PropertyRequestCard[] = [
     title: "مطبخ شقة للايجار",
     subtitle: "الرياض - الدوادمي، المحيط، النظيم",
     badge: "إيجار",
-    price: "14,339,814",
-    area: 257,
+    price:"1500 - 2000",
+    area: "200 : 250",
     bedrooms: 2,
     bathrooms: 3,
     floors: 1,

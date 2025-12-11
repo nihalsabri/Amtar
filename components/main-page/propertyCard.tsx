@@ -159,14 +159,14 @@ export function PropertyCard({
   isFavorite,
 }: PropertyCardProps) {
   return (
-    <div className="relative w-full max-w-[329px] md:max-w-[403px] h-[560px] rounded-3xl overflow-hidden bg-white border border-[#F5F5F5] hover:shadow-lg transition-shadow duration-300">
+    <div className="relative w-full max-w-[329px] h-[560px] rounded-3xl overflow-hidden bg-white border border-[#F5F5F5] hover:shadow-lg transition-shadow duration-300">
 
       {badge && (
         <div className="absolute inset-0 border-2 border-[#FFD700] rounded-3xl pointer-events-none" />
       )}
 
       <div className="flex items-center h-[60px] gap-2 p-4 pb-1">
-        <Image src={companyLogo} alt={company} width={44} height={44} />
+        <Image src={companyLogo} alt={company} width={30} height={30} />
         <div className="flex flex-col">
           <span className="font-normal text-[#1D293D]">{company}</span>
           <span className="font-light text-gray-500">{companyTitle}</span>

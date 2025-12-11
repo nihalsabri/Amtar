@@ -160,8 +160,8 @@ export function PropertyProjectCard({
           <Image
             src={companyLogo}
             alt={company}
-            width={44}
-            height={44}
+            width={40}
+            height={40}
             className="bg-white p-2 rounded-full"
           />
           <div className="flex flex-col">

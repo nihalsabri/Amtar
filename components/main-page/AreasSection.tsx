@@ -1,128 +1,50 @@
-// // // import { mockAreas } from '@/mockData/Area';
-// // // import { AreaCard } from '@/components/main-page/areaCard';
-// // // import SectionTitle from '../common/sectionTitle';
 
-// // // export function AreasSection() {
-// // //   return (
-// // //     <section className="lg:px-20 md:px-10 px-5 p-10 bg-[#F1F5F9] ">
-      
-// // //        <SectionTitle
-// // //                  title= " المناطق الأكثر طلباً في المملكة"
-// // //                   description= "ابحث عن عقاراتك في المناطق الأكثر طلبًا"
-// // //                  more2
-// // //                  href={'/areas'}
-// // //     />
-        
-// // //         <div className="grid grid-cols-4  grid-rows-2 pt-10 gap-6 h-[600px]">
-// // //           {mockAreas.map((area) => (
-// // //             <AreaCard key={area.id} {...area} />
-// // //           ))}
-// // //         </div>
-      
-// // //     </section>
-// // //   );
-// // // }
-
-// // import { mockAreas } from '@/mockData/Area';
-// // import { AreaCard } from '@/components/main-page/areaCard';
-// // import SectionTitle from '../common/sectionTitle';
-
-// // export function AreasSection() {
-// //   return (
-// //     <section className="lg:px-20 md:px-10 px-5 p-10 bg-[#F1F5F9]">
-      
-// //        <SectionTitle
-// //                  title= " المناطق الأكثر طلباً في المملكة"
-// //                   description= "ابحث عن عقاراتك في المناطق الأكثر طلبًا"
-// //                  more2
-// //                  href={'/areas'}
-// //     />
-        
-// //         <div className="
-// //           grid 
-// //           grid-cols-1
-// //           md:grid-cols-2
-// //           lg:grid-cols-4 
-// //           lg:grid-rows-2 
-// //           pt-10 
-// //           gap-6 
-// //           lg:h-[600px]
-// //         ">
-// //           {mockAreas.map((area) => (
-// //             <AreaCard key={area.id} {...area} />
-// //           ))}
-// //         </div>
-      
-// //     </section>
-// //   );
-// // }
-
-// import { mockAreas } from '@/mockData/Area';
-// import { AreaCard } from '@/components/main-page/areaCard';
-// import SectionTitle from '../common/sectionTitle';
-
-// export function AreasSection() {
-//   return (
-//     <section className="lg:px-20 md:px-10 px-5 pt-10 bg-[#F1F5F9]">
-      
-//        <SectionTitle
-//                  title= " المناطق الأكثر طلباً في المملكة"
-//                   description= "ابحث عن عقاراتك في المناطق الأكثر طلبًا"
-//                  more2
-//                  href={'/areas'}
-//     />
-        
-//         <div className="
-//           flex flex-col
-//           md:grid md:grid-cols-2
-//           lg:grid lg:grid-cols-4 
-//           lg:grid-rows-2 
-//           pt-10 
-//           gap-6 
-//           lg:h-[600px]
-//         ">
-//           {mockAreas.map((area) => (
-//             <AreaCard key={area.id} {...area} />
-//           ))}
-//         </div>
-      
-//     </section>
-//   );
-// }
 import { mockAreas } from '@/mockData/Area';
 import { AreaCard } from '@/components/main-page/areaCard';
 import SectionTitle from '../common/sectionTitle';
+import AreaSlides from './areaSlides';
+import { ArrowUpLeft,  } from 'lucide-react';
+import { Button } from '../ui/button';
+import Link from 'next/link';
 
 export function AreasSection() {
   return (
-    <section className="lg:px-20 md:px-10 px-5 pt-10 bg-[#F1F5F9]">
+    <> 
+    {/* <div className="   pt-10 bg-[#F1F5F9]"  >
       <SectionTitle
-        title=" المناطق الأكثر طلباً في المملكة"
+        title="المناطق الأكثر طلباً في المملكة"
         description="ابحث عن عقاراتك في المناطق الأكثر طلبًا"
         more2
         href={'/areas'}
       />
 
-      {/* الشاشات الكبيرة: Grid كما هو (لا تغيير) */}
-      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 pt-10 gap-6 lg:h-[600px]">
-        {mockAreas.map((area) => (
-          <AreaCard key={area.id} {...area} />
-        ))}
-      </div>
+    </div> */}
 
-     <div className="md:hidden flex overflow-x-auto gap-6 pt-10 pb-6 -mx-5 px-5 scrollbar-hide">
-  {mockAreas.map((area) => (
-    <AreaCard
-      key={area.id}
-      title={area.title}
-      image={area.image}
-      link={area.link}
-      size="small"
-      position={{ row: 1, col: 1 }}
-      count={0}
-    />
-  ))}
-</div>
-    </section>
+    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 lg:px-20 md:px-10 px-5 pt-10 bg-[#F1F5F9]">
+          
+     
+          <div className="flex flex-col gap-3 text-right">
+            <h2 className="lg:text-4xl md:text-3xl text-2xl font-bold text-primary">
+              المناطق الأكثر طلباً في المملكة
+            </h2>
+            <p className="text-muted-foreground">
+              ابحث عن عقاراتك في المناطق الأكثر طلبًا
+            </p>
+          </div>
+
+
+          <div className="w-full md:w-auto flex justify-end order-1 md:order-2">
+         <Link href={"/#"} className="pt-3 md:pt-0">
+          <Button className="bg-primary-muted text-primary text-xs md:text-base hover:text-white rounded-full self-end">
+            مشاهدة جميع مناطق الممكلة    
+            <ArrowUpLeft />
+          </Button>
+        </Link>
+          </div>
+
+        </div>
+    
+    <AreaSlides />
+    </>
   );
 }
