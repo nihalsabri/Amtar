@@ -4,7 +4,8 @@ import PropertyRequestsSlides from "./propertyRequestsSlides";
 export default function PropertyRequestsSection() {
   return (
      <>
-      <section className="lg:px-20 md:px-10 px-5 pt-10">
+      <section className="w-full overflow-x-hidden">
+            <div className="lg:px-20 md:px-10 px-5 pt-10">
             <SectionTitle 
                 title="الطلبات العقارية" 
                 description={
@@ -21,6 +22,7 @@ export default function PropertyRequestsSection() {
             />
                         <PropertyRequestsSlides />
 
+        </div>
         </section>
 
 

@@ -8,10 +8,10 @@ import { mockAgents } from "@/mockData/Agent";
 export default function AgentSection() {
   return (
     <section
-      className="flex flex-col justify-center items-center bg-center bg-cover lg:px-20 md:px-10 px-5 mb-20"
+      className="flex flex-col justify-center items-center bg-center bg-cover mb-20 w-full overflow-x-hidden"
       style={{ backgroundImage: "url('/main-page/agent/agent2.png')" }}
     >
-      <div className="py-24 flex flex-col gap-10 justify-center items-center w-full">
+      <div className="py-24 flex flex-col gap-10 justify-center items-center w-full lg:px-20 md:px-10 px-5">
         <SectionTitle
           title="ابحث عن وسيط عقاري مرخص"
           description="ابحث عن الوكلاء الموثوقين الذين حصلوا على جوائز لأدائهم الممتاز"
@@ -25,28 +25,32 @@ export default function AgentSection() {
         </div>
 
         <div className="w-full pb-4">
-          {/* للشاشات الكبيرة - كروت مركزة مع باقي العناصر */}
-          {/* <div className="hidden md:flex justify-center items-center gap-4 px-4 max-w-6xl mx-auto">
+          {/* للشاشات الكبيرة - كروت مركزة مع التراكب */}
+          <div className="hidden lg:flex justify-center items-center w-full relative">
+            <div className="flex relative" style={{ marginLeft: `-${(mockAgents.length - 1) * 40}px` }}>
+              {mockAgents.map((agent, index) => (
+                <AgentCard key={agent.id} {...agent} index={index} />
+              ))}
+            </div>
+          </div>
+
+          {/* للشاشات المتوسطة - كروت مع فراغات */}
+          <div className="hidden md:flex lg:hidden flex overflow-x-auto scrollbar-hide gap-6">
             {mockAgents.map((agent, index) => (
               <AgentCard key={agent.id} {...agent} index={index} />
             ))}
-          </div> */}
-{/* 
-<div className="hidden md:flex justify-center items-center gap-4 px-6 w-full max-w-7xl lg:mr-[10vw] md:mr-0">  {mockAgents.map((agent, index) => (
-    <AgentCard key={agent.id} {...agent} index={index} />
-  ))}
-</div> */}
+          </div>
 
           {/* للشاشات الصغيرة - scroll أفقي */}
-          {/* <div className="md:hidden flex overflow-x-auto scrollbar-hide px-4">
-            <div className="flex items-center gap-2 min-w-max">
+          <div className="md:hidden flex overflow-x-auto scrollbar-hide pb-4">
+            <div className="flex gap-6 min-w-max px-5">
               {mockAgents.map((agent, index) => (
-                <div key={agent.id} className="flex-shrink-0 w-85vw]">
+                <div key={agent.id} className="shrink-0">
                   <AgentCard {...agent} index={index} />
                 </div>
               ))}
-            </div> */}
-          {/* </div> */}
+            </div> 
+          </div>
         </div>
       </div>
     </section>

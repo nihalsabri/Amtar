@@ -69,11 +69,20 @@
   src: url('/fonts/Rubik-Italic-VariableFont_wght.ttf') format('truetype');
 }
 
+html {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Rubik Custom', sans-serif;
   direction: rtl;
-    overflow-x: hidden;
-
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 :root {

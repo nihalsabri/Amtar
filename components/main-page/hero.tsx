@@ -45,7 +45,7 @@ export default function Hero() {
           للبيع
         </p>
       </div>
-      <div className="flex gap-5 lg:px-20 md:px-10 px-5 pb-20 shrink-0 overflow-x-scroll " style={{ scrollbarWidth: "none" }}>
+      <div className="flex gap-5 lg:px-20 md:px-10 px-5 pb-20 shrink-0 overflow-x-auto" style={{ scrollbarWidth: "none" }}>
         {mockData.map((item) => (
           <HeroCard
             key={item.title}

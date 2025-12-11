@@ -4,13 +4,15 @@ import MarketSlides from "./MarketSlides";
 export default function MarketSection() {
   return (
     <>
-      <section className="lg:px-20 md:px-10 px-5 pt-10">
+      <section className="w-full overflow-x-hidden">
+        <div className="lg:px-20 md:px-10 px-5 pt-10">
         <SectionTitle
           title="تسويق عقارات الملاك"
           description="عقار من المالك مباشرة… سهولة في التواصل وفرص أفضل للاتفاق"
           more
           href={'/market'}
         />
+      </div>
       </section>
       <MarketSlides />
     </>

@@ -15,7 +15,7 @@ interface AgentCardProps {
 
 export function AgentCard({ name, location, index, color, image }: AgentCardProps) {
   return (
-    <div className={` sm:flex-shrink-0 w-[271px] h-[185px]p-[16px] rounded-xl overflow-hidden flex flex-col items-center justify-center p-4 ${getColorClass(color)}`}
+    <div className={`sm:shrink-0 w-[271px] h-[185px] p-4 rounded-xl overflow-hidden flex flex-col items-center justify-center ${getColorClass(color)}`}
     style={{
         transform: `translateX(${index * 80}px)`, 
         zIndex: 10 - index, 
